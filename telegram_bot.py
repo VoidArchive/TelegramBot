@@ -1,11 +1,10 @@
-import details
+import api
 import requests
 
 def send_message_to_telegram(message):
-    api_key = details.API_KEY
-    group_id = details.group_id
+    api_key = api.API_KEY
+    group_id = api.group_id
 
-    # https://api.telegram.org/bot2146001890:AAFqdKoiF3ftzz4QM1LtREfUxe0aJ1aX9Xc/getUpdates
     # https://api.telegram.org/bot<token>/sendMessage?chat_id=<group chat id >&text=<our text>
     parameters = {
         "chat_id":group_id,
@@ -15,3 +14,5 @@ def send_message_to_telegram(message):
     msg = "/sendMessage"
     response = requests.get(f"{tele_endpoint}{api_key}{msg}",params=parameters)
     response.raise_for_status()
+
+send_message_to_telegram("HelLo")
