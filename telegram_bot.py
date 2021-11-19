@@ -1,6 +1,7 @@
 import details
 import requests
 
+
 def send_message_to_telegram(message):
     api_key = details.API_KEY
     group_id = details.group_id

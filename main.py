@@ -1,13 +1,14 @@
 import requests
 import telegram_bot as void
-import details
+import user
+
 
 open_weather_api_end_point = "https://api.openweathermap.org/data/2.5/onecall"
 parameters = {
-    "lat" : details.my_lat,
-    "lon" : details.my_lon,
+    "lat" : user.my_lat,
+    "lon" : user.my_lon,
     "exclude":"current,minutely,daily",
-    "appid": details.ow_apikey
+    "appid": user.ow_apikey
 }
 def get_current_weather():
     response = requests.get(open_weather_api_end_point,params=parameters)
