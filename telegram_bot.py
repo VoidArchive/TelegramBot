@@ -1,4 +1,4 @@
-import details
+import user
 import requests
 
 
