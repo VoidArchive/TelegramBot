@@ -24,7 +24,7 @@ def get_current_weather():
     elif avg_wid >600:
         message = "It's going to be cold. Wear warm clothes"
     elif avg_wid >= 500:
-        message = "Might be your favorite Day. It might to rain today."
+        message = "Might be your favorite Day. It might to rain."
     elif avg_wid < 500:
         message = "Stay Home, Or have a umbrella with your at all times. We are going to have a heavy rain."
     else:
