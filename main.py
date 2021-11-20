@@ -40,7 +40,8 @@ def get_current_weather():
     "snow": "🌨️",
     "mist": "🌁"
 }
-    weather_emo = [icon_dict[i] for i in weather_description]
+
+    weather_emo = [f"{c + 8}:00 {icon_dict[i]}    " for c,i in enumerate(weather_description)]
     
     return "  " .join(weather_emo)
 
